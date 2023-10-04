@@ -4,7 +4,7 @@ const ProvinceSchema = new mongoose.Schema({
     name: { type: String, requiered: true },
 });
 
-export const ProvinceModel = mongoose.model("Province", ProvinceSchema);
+export const ProvinceModel = mongoose.model("provinces", ProvinceSchema);
 
 export const createProvince = (values: Record<string, any>) =>
     new ProvinceModel(values).save().then((province) => province.toObject());

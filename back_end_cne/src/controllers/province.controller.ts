@@ -39,7 +39,7 @@ export const getAllProvinces = async (req: express.Request, res: express.Respons
         const provinces = await getProvinces();
 
         console.log('Provinces was retrived');
-
+        console.log(provinces);
 
         return res.status(200).json(provinces);
 
